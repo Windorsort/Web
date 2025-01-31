@@ -34,4 +34,4 @@ jobs:
         run: |
           echo "$SSH_PRIVATE_KEY" > key.pem
           chmod 600 key.pem
-          ssh -o StrictHostKeyChecking=no -i key.pem user@$SERVER_IP 'docker pull ваш_пользователь/ваш_репозиторий:latest && docker stop ваш_репозиторий || true && docker rm ваш_репозиторий || true && docker run -d -p 5000:5000 --name ваш_репозиторий ваш_пользователь/ваш_репозиторий:latest'
+          ssh -o StrictHostKeyChecking=no -i key.pem user@$SERVER_IP 'docker pull windorsort/windorsort:latest && docker stop windorsort || true && docker rm windorsort || true && docker run -d -p 5000:5000 --name windorsort windorsort/windorsort:latest'
