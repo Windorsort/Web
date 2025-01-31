@@ -24,8 +24,8 @@ jobs:
 
       - name: Build and push Docker image
         run: |
-          docker build -t ваш_пользователь/ваш_репозиторий:latest .
-          docker push ваш_пользователь/ваш_репозиторий:latest
+          docker build -t windorsort/windorsort:latest .
+          docker push windorsort/windorsort:latest
 
       - name: Deploy to server
         env:
